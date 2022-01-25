@@ -1,0 +1,12 @@
+# Specify configuration of lineplots averaged across groups.
+mosaic_homotypic:
+  mosaic-8 RBD (n=6):
+    - mosaic_6848_3125
+    - mosaic_6849_3125
+    - mosaic_6850_3125
+    - mosaic_6851_3125
+    - mosaic_6852_3125
+    - mosaic_6853_3125
+  homotypic Beta RBD (n=2):
+    - homotypic_6881_7812
+    - homotypic_6883_7812

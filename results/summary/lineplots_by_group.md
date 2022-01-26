@@ -253,7 +253,7 @@ for supergroup, subgroup in line_plot_config.items():
     _ = p.draw()
 ```
 
-    /loc/scratch/46867390/ipykernel_16356/1068878828.py:33: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+    /tmp/ipykernel_62969/1068878828.py:33: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
     /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/scales/scale_alpha.py:68: PlotnineWarning: Using alpha for a discrete variable is not advised.
     /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
     /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
@@ -280,69 +280,91 @@ Though we will want more elaborate series of commands to codify our visualizatio
 
 
 ```python
-pdbfile = 'data/pdbs/6M0J.pdb'
-assert os.path.isfile(pdbfile)
-rbd_chain = config['escape_frac_protein_chain']
-assert isinstance(rbd_chain, str)
+# dictionary with PDB and RBD chain
+pdbfiles = {'6M0J':'E',
+            '7LYQ_RBD':'B',
+            }
 
-for supergroup, subgroup in line_plot_config.items():
-
-    for name, conditions in subgroup.items():
-        
-        name=name.replace('.', '')
-        name=name.replace(' ', '')
-        name=re.search(r"^[^\(]*", name).group(0)
-        
-        print(f"\nMaking PDB mappings for the average of {len(conditions)} conditions for {name} to {pdbfile}")
-
-        # get escape fracs just for conditions of interest
-        df = escape_fracs.query('condition in @conditions')
-
-        # assign average total_escape at each site across all the conditions in ab_class
-        df = (df
-              .groupby(['site'])
-              .aggregate(mean_total_escape=pd.NamedAgg('site_escape', 'mean'),
-                          )
-              .reset_index()
-              .drop_duplicates()
-             )
-
-        # get chains
-        print(f'Mapping to the following chain: {rbd_chain}')
-        df = df.assign(chain=rbd_chain)
+# 'data/pdbs/6M0J.pdb'
 
 
-        # make mappings for each condition and metric
-        print(f"  Writing B-factor re-assigned PDBs for {name} to:")
+for p in pdbfiles.keys():
+    
+    pdbfile=f'data/pdbs/{p}.pdb'
+    
+    assert os.path.isfile(pdbfile)
+    rbd_chain = pdbfiles[p]
+    # rbd_chain = config['escape_frac_protein_chain']
+    assert isinstance(rbd_chain, str)
 
-        for metric in ['mean_total_escape']: # keeping this as list because we might need to normalize
+    for supergroup, subgroup in line_plot_config.items():
 
-            # what do we assign to missing sites?
-            missing_metric = collections.defaultdict(lambda: 0)  # non-RBD chains always fill to zero
-            
-            # note that the next line DOESN'T ACTUALLY WORK AS INTENDED because I'm using padded escape fracs
-            missing_metric[rbd_chain] = -1  # missing sites in RBD are -1 for non-normalized metric PDBs
+        for name, conditions in subgroup.items():
 
-            fname = os.path.join(results_dir, f"{name}_6m0j_{metric}.pdb")
-            print(f"    {fname}")
+            name=name.replace('.', '')
+            name=name.replace(' ', '')
+            name=re.search(r"^[^\(]*", name).group(0)
 
-            dms_variants.pdb_utils.reassign_b_factor(input_pdbfile=pdbfile,
-                                                     output_pdbfile=fname,
-                                                     df=df,
-                                                     metric_col=metric,
-                                                     missing_metric=missing_metric)
+            print(f"\nMaking PDB mappings for the average of {len(conditions)} conditions for {name} to {pdbfile}")
+
+            # get escape fracs just for conditions of interest
+            df = escape_fracs.query('condition in @conditions')
+
+            # assign average total_escape at each site across all the conditions in ab_class
+            df = (df
+                  .groupby(['site'])
+                  .aggregate(mean_total_escape=pd.NamedAgg('site_escape', 'mean'),
+                              )
+                  .reset_index()
+                  .drop_duplicates()
+                 )
+
+            # get chains
+            print(f'Mapping to the following chain: {rbd_chain}')
+            df = df.assign(chain=rbd_chain)
+
+
+            # make mappings for each condition and metric
+            print(f"  Writing B-factor re-assigned PDBs for {name} to:")
+
+            for metric in ['mean_total_escape']: # keeping this as list because we might need to normalize
+
+                # what do we assign to missing sites?
+                missing_metric = collections.defaultdict(lambda: 0)  # non-RBD chains always fill to zero
+
+                # note that the next line DOESN'T ACTUALLY WORK AS INTENDED because I'm using padded escape fracs
+                missing_metric[rbd_chain] = -1  # missing sites in RBD are -1 for non-normalized metric PDBs
+
+                fname = os.path.join(results_dir, f"{name}_{p}_{metric}.pdb")
+                print(f"    {fname}")
+
+                dms_variants.pdb_utils.reassign_b_factor(input_pdbfile=pdbfile,
+                                                         output_pdbfile=fname,
+                                                         df=df,
+                                                         metric_col=metric,
+                                                         missing_metric=missing_metric)
 ```
 
     
     Making PDB mappings for the average of 6 conditions for mosaic-8RBD to data/pdbs/6M0J.pdb
     Mapping to the following chain: E
       Writing B-factor re-assigned PDBs for mosaic-8RBD to:
-        results/lineplots_by_group/mosaic-8RBD_6m0j_mean_total_escape.pdb
+        results/lineplots_by_group/mosaic-8RBD_6M0J_mean_total_escape.pdb
     
     Making PDB mappings for the average of 2 conditions for homotypicBetaRBD to data/pdbs/6M0J.pdb
     Mapping to the following chain: E
       Writing B-factor re-assigned PDBs for homotypicBetaRBD to:
-        results/lineplots_by_group/homotypicBetaRBD_6m0j_mean_total_escape.pdb
+        results/lineplots_by_group/homotypicBetaRBD_6M0J_mean_total_escape.pdb
+    
+    Making PDB mappings for the average of 6 conditions for mosaic-8RBD to data/pdbs/7LYQ_RBD.pdb
+    Mapping to the following chain: B
+      Writing B-factor re-assigned PDBs for mosaic-8RBD to:
+        results/lineplots_by_group/mosaic-8RBD_7LYQ_RBD_mean_total_escape.pdb
+    
+    Making PDB mappings for the average of 2 conditions for homotypicBetaRBD to data/pdbs/7LYQ_RBD.pdb
+    Mapping to the following chain: B
+      Writing B-factor re-assigned PDBs for homotypicBetaRBD to:
+        results/lineplots_by_group/homotypicBetaRBD_7LYQ_RBD_mean_total_escape.pdb
 
 
 

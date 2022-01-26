@@ -555,6 +555,9 @@ for name, specs in escape_profiles_config.items():
                       validate='many_to_one',
                       )
     
+    # re-specify order to plot
+    df = df.assign(condition=lambda x: pd.Categorical(x['condition'], specs['conditions'].values(), ordered=True))
+    
     # get any additional logo plot arguments
     if 'dmslogo_facet_plot_kwargs' in specs:
         dmslogo_facet_plot_kwargs = specs['dmslogo_facet_plot_kwargs']

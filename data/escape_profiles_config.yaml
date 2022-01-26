@@ -34,14 +34,14 @@
 
 B1351:
   conditions:
-    mosaic_6848_3125: mosaic_6848
-    mosaic_6849_3125: mosaic_6849
-    mosaic_6850_3125: mosaic_6850
-    mosaic_6851_3125: mosaic_6851
-    mosaic_6852_3125: mosaic_6852
-    mosaic_6853_3125: mosaic_6853
-    homotypic_6881_7812: homotypic_6881
-    homotypic_6883_7812: homotypic_6883
+    mosaic_6848_3125: mosaic 6848
+    mosaic_6850_3125: mosaic 6850
+    mosaic_6851_3125: mosaic 6851
+    mosaic_6853_3125: mosaic 6853
+    mosaic_6849_3125: mosaic 6849
+    mosaic_6852_3125: mosaic 6852
+    homotypic_6881_7812: homotypic 6881
+    homotypic_6883_7812: homotypic 6883
   plot_auto_identified_sites: default
   add_sites: [365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,477,478,484,501]
   exclude_sites: [336, 361]
@@ -56,3 +56,44 @@ B1351:
   dmslogo_draw_logo_kwargs:
     widthscale: 0.75
     axisfontscale: 1.5
+  shade_sites: # add shading to sites that are predicted NLGKI
+    mosaic 6848:
+      357: [gray, 0.15]
+      369: [gray, 0.15]
+      390: [gray, 0.15]
+      396: [gray, 0.15]
+    mosaic 6849:
+      357: [gray, 0.15]
+      369: [gray, 0.15]
+      390: [gray, 0.15]
+      396: [gray, 0.15]
+    mosaic 6850:
+      357: [gray, 0.15]
+      369: [gray, 0.15]
+      390: [gray, 0.15]
+      396: [gray, 0.15]
+    mosaic 6851:
+      357: [gray, 0.15]
+      369: [gray, 0.15]
+      390: [gray, 0.15]
+      396: [gray, 0.15]
+    mosaic 6852:
+      357: [gray, 0.15]
+      369: [gray, 0.15]
+      390: [gray, 0.15]
+      396: [gray, 0.15]
+    mosaic 6853:
+      357: [gray, 0.15]
+      369: [gray, 0.15]
+      390: [gray, 0.15]
+      396: [gray, 0.15]
+    homotypic 6881:
+      357: [gray, 0.15]
+      369: [gray, 0.15]
+      390: [gray, 0.15]
+      396: [gray, 0.15]
+    homotypic 6883:
+      357: [gray, 0.15]
+      369: [gray, 0.15]
+      390: [gray, 0.15]
+      396: [gray, 0.15]

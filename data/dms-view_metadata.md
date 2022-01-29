@@ -3,10 +3,10 @@
 For experimental background, see our paper **here (update with link)**.
 
 ### What data are shown here?
-We are showing mutations to the SARS-CoV-2 RBD that escape binding by polyclonal antibodies from mice vaccinated with mosaic-8 or homotypic nanoparticle vaccines (note that the SARS-CoV-2 component in both cases is of the Beta varaint), measured using mutational antigenic profiling. Raw data are available raw data are available [here]().
+We are showing mutations to the SARS-CoV-2 RBD that escape binding by polyclonal antibodies from mice vaccinated with mosaic-8 or homotypic nanoparticle vaccines (note that the SARS-CoV-2 component in both cases is of the Beta variant), measured using mutational antigenic profiling. Raw data are available raw data are available [here](https://github.com/jbloomlab/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/blob/main/results/supp_data/B1351_raw_data.csv).
 The drop-down menus can be used to select the escape-mutation maps for each antibody or plasma.
 
-When you click on sites, they will be highlighted on the protein structure of the ACE2-bound Wuhan-Hu-1 RBD structure ([PDB 6M0J](https://www.rcsb.org/structure/6M0J)) or to the RBD of the B.1.351 variant ([PDB 7LYQ](https://www.rcsb.org/structure/7LYQ)).
+When you click on sites, they will be highlighted on the protein structure of the B.1.351 variant ([PDB 7LYQ](https://www.rcsb.org/structure/7LYQ)).
 
 At the site level you can visualize one of two quantities:
 

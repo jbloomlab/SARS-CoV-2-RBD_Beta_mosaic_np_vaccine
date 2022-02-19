@@ -111,34 +111,34 @@ display(HTML(escape_fracs.head().to_html(index=False)))
   </thead>
   <tbody>
     <tr>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>331</td>
       <td>E</td>
-      <td>0.06774</td>
+      <td>0.0513</td>
     </tr>
     <tr>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>331</td>
       <td>E</td>
-      <td>0.06774</td>
+      <td>0.0513</td>
     </tr>
     <tr>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>331</td>
       <td>E</td>
-      <td>0.06774</td>
+      <td>0.0513</td>
     </tr>
     <tr>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>331</td>
       <td>E</td>
-      <td>0.06774</td>
+      <td>0.0513</td>
     </tr>
     <tr>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>331</td>
       <td>E</td>
-      <td>0.06774</td>
+      <td>0.0513</td>
     </tr>
   </tbody>
 </table>
@@ -253,7 +253,7 @@ for supergroup, subgroup in line_plot_config.items():
     _ = p.draw()
 ```
 
-    /tmp/ipykernel_62969/1068878828.py:33: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+    /loc/scratch/49497553/ipykernel_15062/1068878828.py:33: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
     /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/scales/scale_alpha.py:68: PlotnineWarning: Using alpha for a discrete variable is not advised.
     /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
     /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
@@ -346,25 +346,35 @@ for p in pdbfiles.keys():
 ```
 
     
-    Making PDB mappings for the average of 6 conditions for mosaic-8RBD to data/pdbs/6M0J.pdb
+    Making PDB mappings for the average of 6 conditions for mosaic-8bRBDmice to data/pdbs/6M0J.pdb
     Mapping to the following chain: E
-      Writing B-factor re-assigned PDBs for mosaic-8RBD to:
-        results/lineplots_by_group/mosaic-8RBD_6M0J_mean_total_escape.pdb
+      Writing B-factor re-assigned PDBs for mosaic-8bRBDmice to:
+        results/lineplots_by_group/mosaic-8bRBDmice_6M0J_mean_total_escape.pdb
     
-    Making PDB mappings for the average of 2 conditions for homotypicBetaRBD to data/pdbs/6M0J.pdb
+    Making PDB mappings for the average of 6 conditions for homotypicBetaRBDmice to data/pdbs/6M0J.pdb
     Mapping to the following chain: E
-      Writing B-factor re-assigned PDBs for homotypicBetaRBD to:
-        results/lineplots_by_group/homotypicBetaRBD_6M0J_mean_total_escape.pdb
+      Writing B-factor re-assigned PDBs for homotypicBetaRBDmice to:
+        results/lineplots_by_group/homotypicBetaRBDmice_6M0J_mean_total_escape.pdb
     
-    Making PDB mappings for the average of 6 conditions for mosaic-8RBD to data/pdbs/7LYQ_RBD.pdb
-    Mapping to the following chain: B
-      Writing B-factor re-assigned PDBs for mosaic-8RBD to:
-        results/lineplots_by_group/mosaic-8RBD_7LYQ_RBD_mean_total_escape.pdb
+    Making PDB mappings for the average of 4 conditions for mosaic-8bRBDNHPs to data/pdbs/6M0J.pdb
+    Mapping to the following chain: E
+      Writing B-factor re-assigned PDBs for mosaic-8bRBDNHPs to:
+        results/lineplots_by_group/mosaic-8bRBDNHPs_6M0J_mean_total_escape.pdb
     
-    Making PDB mappings for the average of 2 conditions for homotypicBetaRBD to data/pdbs/7LYQ_RBD.pdb
+    Making PDB mappings for the average of 6 conditions for mosaic-8bRBDmice to data/pdbs/7LYQ_RBD.pdb
     Mapping to the following chain: B
-      Writing B-factor re-assigned PDBs for homotypicBetaRBD to:
-        results/lineplots_by_group/homotypicBetaRBD_7LYQ_RBD_mean_total_escape.pdb
+      Writing B-factor re-assigned PDBs for mosaic-8bRBDmice to:
+        results/lineplots_by_group/mosaic-8bRBDmice_7LYQ_RBD_mean_total_escape.pdb
+    
+    Making PDB mappings for the average of 6 conditions for homotypicBetaRBDmice to data/pdbs/7LYQ_RBD.pdb
+    Mapping to the following chain: B
+      Writing B-factor re-assigned PDBs for homotypicBetaRBDmice to:
+        results/lineplots_by_group/homotypicBetaRBDmice_7LYQ_RBD_mean_total_escape.pdb
+    
+    Making PDB mappings for the average of 4 conditions for mosaic-8bRBDNHPs to data/pdbs/7LYQ_RBD.pdb
+    Mapping to the following chain: B
+      Writing B-factor re-assigned PDBs for mosaic-8bRBDNHPs to:
+        results/lineplots_by_group/mosaic-8bRBDNHPs_7LYQ_RBD_mean_total_escape.pdb
 
 
 

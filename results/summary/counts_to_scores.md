@@ -200,6 +200,51 @@ display(HTML(
       <td>161.0</td>
       <td>121.5</td>
     </tr>
+    <tr>
+      <th>beta_27-34-none-0-ref</th>
+      <td>1106.4</td>
+      <td>1273.7</td>
+    </tr>
+    <tr>
+      <th>beta_27-homotypic_6880-5000-abneg</th>
+      <td>128.6</td>
+      <td>111.0</td>
+    </tr>
+    <tr>
+      <th>beta_28-homotypic_6882-5000-abneg</th>
+      <td>108.2</td>
+      <td>97.3</td>
+    </tr>
+    <tr>
+      <th>beta_29-homotypic_6884-5000-abneg</th>
+      <td>108.4</td>
+      <td>98.9</td>
+    </tr>
+    <tr>
+      <th>beta_30-homotypic_6885-5000-abneg</th>
+      <td>133.2</td>
+      <td>142.4</td>
+    </tr>
+    <tr>
+      <th>beta_31-NHP_mosaic_MA292-1000-abneg</th>
+      <td>156.8</td>
+      <td>117.6</td>
+    </tr>
+    <tr>
+      <th>beta_32-NHP_mosaic_AO2-1000-abneg</th>
+      <td>119.6</td>
+      <td>88.8</td>
+    </tr>
+    <tr>
+      <th>beta_33-NHP_mosaic_0Z5-1000-abneg</th>
+      <td>105.4</td>
+      <td>102.7</td>
+    </tr>
+    <tr>
+      <th>beta_34-NHP_mosaic_AT5-1000-abneg</th>
+      <td>112.0</td>
+      <td>139.0</td>
+    </tr>
   </tbody>
 </table>
 
@@ -229,6 +274,12 @@ for date, date_df in samples_df.groupby('date', sort=False):
     
 
 
+
+    
+![png](counts_to_scores_files/counts_to_scores_23_1.png)
+    
+
+
 Now similar plots but showing mutation frequency across the gene:
 
 
@@ -250,6 +301,12 @@ for date, date_df in samples_df.groupby('date', sort=False):
 
     
 ![png](counts_to_scores_files/counts_to_scores_25_0.png)
+    
+
+
+
+    
+![png](counts_to_scores_files/counts_to_scores_25_1.png)
     
 
 
@@ -418,7 +475,7 @@ display(HTML(
   </thead>
   <tbody>
     <tr>
-      <th>lib1</th>
+      <th rowspan="2" valign="top">lib1</th>
       <th>beta_19-26-none-0-ref</th>
       <td>0.0003</td>
       <td>B1351</td>
@@ -427,8 +484,24 @@ display(HTML(
       <td>CCT7AGA GCG190TCT</td>
     </tr>
     <tr>
-      <th>lib2</th>
+      <th>beta_27-34-none-0-ref</th>
+      <td>0.0003</td>
+      <td>B1351</td>
+      <td>GCATATGCTAGTAATG</td>
+      <td>I104M</td>
+      <td>ATA104ATG</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">lib2</th>
       <th>beta_19-26-none-0-ref</th>
+      <td>0.0003</td>
+      <td>B1351</td>
+      <td>GAGGTGTATAGTACCT</td>
+      <td>G155F</td>
+      <td>GGC155TTT</td>
+    </tr>
+    <tr>
+      <th>beta_27-34-none-0-ref</th>
       <td>0.0003</td>
       <td>B1351</td>
       <td>GAGGTGTATAGTACCT</td>
@@ -658,6 +731,126 @@ display(HTML(score_sample_df.to_html(index=False)))
   </thead>
   <tbody>
     <tr>
+      <td>NHP_mosaic_0Z5_1000</td>
+      <td>lib1</td>
+      <td>NHP_mosaic_0Z5</td>
+      <td>1000</td>
+      <td>220210</td>
+      <td>beta_27-34-none-0-ref</td>
+      <td>beta_33-NHP_mosaic_0Z5-1000-abneg</td>
+      <td>0.092</td>
+      <td>809798.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>NHP_mosaic_0Z5_1000</td>
+      <td>lib2</td>
+      <td>NHP_mosaic_0Z5</td>
+      <td>1000</td>
+      <td>220210</td>
+      <td>beta_27-34-none-0-ref</td>
+      <td>beta_33-NHP_mosaic_0Z5-1000-abneg</td>
+      <td>0.083</td>
+      <td>803102.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>NHP_mosaic_AO2_1000</td>
+      <td>lib1</td>
+      <td>NHP_mosaic_AO2</td>
+      <td>1000</td>
+      <td>220210</td>
+      <td>beta_27-34-none-0-ref</td>
+      <td>beta_32-NHP_mosaic_AO2-1000-abneg</td>
+      <td>0.088</td>
+      <td>873108.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>NHP_mosaic_AO2_1000</td>
+      <td>lib2</td>
+      <td>NHP_mosaic_AO2</td>
+      <td>1000</td>
+      <td>220210</td>
+      <td>beta_27-34-none-0-ref</td>
+      <td>beta_32-NHP_mosaic_AO2-1000-abneg</td>
+      <td>0.086</td>
+      <td>721759.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>NHP_mosaic_AT5_1000</td>
+      <td>lib1</td>
+      <td>NHP_mosaic_AT5</td>
+      <td>1000</td>
+      <td>220210</td>
+      <td>beta_27-34-none-0-ref</td>
+      <td>beta_34-NHP_mosaic_AT5-1000-abneg</td>
+      <td>0.085</td>
+      <td>821781.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>NHP_mosaic_AT5_1000</td>
+      <td>lib2</td>
+      <td>NHP_mosaic_AT5</td>
+      <td>1000</td>
+      <td>220210</td>
+      <td>beta_27-34-none-0-ref</td>
+      <td>beta_34-NHP_mosaic_AT5-1000-abneg</td>
+      <td>0.096</td>
+      <td>853365.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>NHP_mosaic_MA292_1000</td>
+      <td>lib1</td>
+      <td>NHP_mosaic_MA292</td>
+      <td>1000</td>
+      <td>220210</td>
+      <td>beta_27-34-none-0-ref</td>
+      <td>beta_31-NHP_mosaic_MA292-1000-abneg</td>
+      <td>0.094</td>
+      <td>1076671.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>NHP_mosaic_MA292_1000</td>
+      <td>lib2</td>
+      <td>NHP_mosaic_MA292</td>
+      <td>1000</td>
+      <td>220210</td>
+      <td>beta_27-34-none-0-ref</td>
+      <td>beta_31-NHP_mosaic_MA292-1000-abneg</td>
+      <td>0.087</td>
+      <td>804993.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>homotypic_6880_5000</td>
+      <td>lib1</td>
+      <td>homotypic_6880</td>
+      <td>5000</td>
+      <td>220210</td>
+      <td>beta_27-34-none-0-ref</td>
+      <td>beta_27-homotypic_6880-5000-abneg</td>
+      <td>0.113</td>
+      <td>1012281.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>homotypic_6880_5000</td>
+      <td>lib2</td>
+      <td>homotypic_6880</td>
+      <td>5000</td>
+      <td>220210</td>
+      <td>beta_27-34-none-0-ref</td>
+      <td>beta_27-homotypic_6880-5000-abneg</td>
+      <td>0.090</td>
+      <td>768288.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
       <td>homotypic_6881_7812</td>
       <td>lib1</td>
       <td>homotypic_6881</td>
@@ -682,6 +875,30 @@ display(HTML(score_sample_df.to_html(index=False)))
       <td>NaN</td>
     </tr>
     <tr>
+      <td>homotypic_6882_5000</td>
+      <td>lib1</td>
+      <td>homotypic_6882</td>
+      <td>5000</td>
+      <td>220210</td>
+      <td>beta_27-34-none-0-ref</td>
+      <td>beta_28-homotypic_6882-5000-abneg</td>
+      <td>0.104</td>
+      <td>812393.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>homotypic_6882_5000</td>
+      <td>lib2</td>
+      <td>homotypic_6882</td>
+      <td>5000</td>
+      <td>220210</td>
+      <td>beta_27-34-none-0-ref</td>
+      <td>beta_28-homotypic_6882-5000-abneg</td>
+      <td>0.084</td>
+      <td>728487.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
       <td>homotypic_6883_7812</td>
       <td>lib1</td>
       <td>homotypic_6883</td>
@@ -703,6 +920,54 @@ display(HTML(score_sample_df.to_html(index=False)))
       <td>beta_26-homotypic_6883-7812-abneg</td>
       <td>0.085</td>
       <td>853705.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>homotypic_6884_5000</td>
+      <td>lib1</td>
+      <td>homotypic_6884</td>
+      <td>5000</td>
+      <td>220210</td>
+      <td>beta_27-34-none-0-ref</td>
+      <td>beta_29-homotypic_6884-5000-abneg</td>
+      <td>0.099</td>
+      <td>802387.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>homotypic_6884_5000</td>
+      <td>lib2</td>
+      <td>homotypic_6884</td>
+      <td>5000</td>
+      <td>220210</td>
+      <td>beta_27-34-none-0-ref</td>
+      <td>beta_29-homotypic_6884-5000-abneg</td>
+      <td>0.079</td>
+      <td>638644.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>homotypic_6885_5000</td>
+      <td>lib1</td>
+      <td>homotypic_6885</td>
+      <td>5000</td>
+      <td>220210</td>
+      <td>beta_27-34-none-0-ref</td>
+      <td>beta_30-homotypic_6885-5000-abneg</td>
+      <td>0.111</td>
+      <td>901855.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>homotypic_6885_5000</td>
+      <td>lib2</td>
+      <td>homotypic_6885</td>
+      <td>5000</td>
+      <td>220210</td>
+      <td>beta_27-34-none-0-ref</td>
+      <td>beta_30-homotypic_6885-5000-abneg</td>
+      <td>0.090</td>
+      <td>729795.0</td>
       <td>NaN</td>
     </tr>
     <tr>
@@ -906,33 +1171,16 @@ display(HTML(escape_scores.head().to_html(index=False)))
   </thead>
   <tbody>
     <tr>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>B1351</td>
       <td>lib1</td>
-      <td>beta_19-26-none-0-ref</td>
-      <td>beta_25-homotypic_6881-7812-abneg</td>
-      <td>AAAGATACTACATGGT</td>
-      <td>0.001358</td>
-      <td>7.238612e-08</td>
-      <td>17357</td>
-      <td>25</td>
-      <td>CCT7AGA GCG190TCT</td>
-      <td>2</td>
-      <td>P7R A190S</td>
-      <td>2</td>
-      <td>&gt;1 nonsynonymous</td>
-    </tr>
-    <tr>
-      <td>homotypic_6881_7812</td>
-      <td>B1351</td>
-      <td>lib1</td>
-      <td>beta_19-26-none-0-ref</td>
-      <td>beta_25-homotypic_6881-7812-abneg</td>
+      <td>beta_27-34-none-0-ref</td>
+      <td>beta_33-NHP_mosaic_0Z5-1000-abneg</td>
       <td>GCATATGCTAGTAATG</td>
-      <td>0.002734</td>
-      <td>1.545337e-07</td>
-      <td>16395</td>
-      <td>48</td>
+      <td>0.003276</td>
+      <td>1.976165e-07</td>
+      <td>15999</td>
+      <td>54</td>
       <td>ATA104ATG</td>
       <td>1</td>
       <td>I104M</td>
@@ -940,16 +1188,16 @@ display(HTML(escape_scores.head().to_html(index=False)))
       <td>1 nonsynonymous</td>
     </tr>
     <tr>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>B1351</td>
       <td>lib1</td>
-      <td>beta_19-26-none-0-ref</td>
-      <td>beta_25-homotypic_6881-7812-abneg</td>
+      <td>beta_27-34-none-0-ref</td>
+      <td>beta_33-NHP_mosaic_0Z5-1000-abneg</td>
       <td>TAGCCAGCTAACCTAA</td>
-      <td>0.000220</td>
-      <td>1.386277e-08</td>
-      <td>14685</td>
-      <td>3</td>
+      <td>0.001737</td>
+      <td>1.099220e-07</td>
+      <td>15226</td>
+      <td>27</td>
       <td>CTT5TGT</td>
       <td>1</td>
       <td>L5C</td>
@@ -957,16 +1205,33 @@ display(HTML(escape_scores.head().to_html(index=False)))
       <td>1 nonsynonymous</td>
     </tr>
     <tr>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>B1351</td>
       <td>lib1</td>
-      <td>beta_19-26-none-0-ref</td>
-      <td>beta_25-homotypic_6881-7812-abneg</td>
+      <td>beta_27-34-none-0-ref</td>
+      <td>beta_33-NHP_mosaic_0Z5-1000-abneg</td>
+      <td>AAAGATACTACATGGT</td>
+      <td>0.004842</td>
+      <td>3.205908e-07</td>
+      <td>14599</td>
+      <td>73</td>
+      <td>CCT7AGA GCG190TCT</td>
+      <td>2</td>
+      <td>P7R A190S</td>
+      <td>2</td>
+      <td>&gt;1 nonsynonymous</td>
+    </tr>
+    <tr>
+      <td>NHP_mosaic_0Z5_1000</td>
+      <td>B1351</td>
+      <td>lib1</td>
+      <td>beta_27-34-none-0-ref</td>
+      <td>beta_33-NHP_mosaic_0Z5-1000-abneg</td>
       <td>GCACATCTAGTAAGAT</td>
-      <td>0.001147</td>
-      <td>7.521674e-08</td>
-      <td>14104</td>
-      <td>17</td>
+      <td>0.000920</td>
+      <td>6.271977e-08</td>
+      <td>14117</td>
+      <td>13</td>
       <td>TTT62TCT ACC148ACT</td>
       <td>2</td>
       <td>F62S</td>
@@ -974,19 +1239,19 @@ display(HTML(escape_scores.head().to_html(index=False)))
       <td>1 nonsynonymous</td>
     </tr>
     <tr>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>B1351</td>
       <td>lib1</td>
-      <td>beta_19-26-none-0-ref</td>
-      <td>beta_25-homotypic_6881-7812-abneg</td>
-      <td>ACAGATGATTACAAAA</td>
-      <td>0.001305</td>
-      <td>8.749763e-08</td>
-      <td>13805</td>
-      <td>19</td>
-      <td>TCT53GCT</td>
+      <td>beta_27-34-none-0-ref</td>
+      <td>beta_33-NHP_mosaic_0Z5-1000-abneg</td>
+      <td>GAGATCAGCGACTAGG</td>
+      <td>0.002162</td>
+      <td>1.588298e-07</td>
+      <td>13122</td>
+      <td>29</td>
+      <td>CGT78ATG</td>
       <td>1</td>
-      <td>S53A</td>
+      <td>R78M</td>
       <td>1</td>
       <td>1 nonsynonymous</td>
     </tr>
@@ -1086,6 +1351,27 @@ display(HTML(pre_count_filter_cutoffs.to_html(float_format='%.1f')))
       <td>1398.0</td>
       <td>1398.0</td>
     </tr>
+    <tr>
+      <th rowspan="2" valign="top">beta_27-34-none-0-ref</th>
+      <th>lib1</th>
+      <td>124.5</td>
+      <td>399.0</td>
+      <td>707.0</td>
+      <td>1248.0</td>
+      <td>2223.0</td>
+      <td>2748.0</td>
+      <td>2748.0</td>
+    </tr>
+    <tr>
+      <th>lib2</th>
+      <td>165.0</td>
+      <td>559.6</td>
+      <td>901.4</td>
+      <td>1293.8</td>
+      <td>1383.1</td>
+      <td>1396.0</td>
+      <td>1396.0</td>
+    </tr>
   </tbody>
 </table>
 
@@ -1116,6 +1402,18 @@ display(HTML(pre_count_filter_cutoffs.to_html(float_format='%.1f')))
       <td>beta_19-26-none-0-ref</td>
       <td>lib2</td>
       <td>525.5</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>beta_27-34-none-0-ref</td>
+      <td>lib1</td>
+      <td>399.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>beta_27-34-none-0-ref</td>
+      <td>lib2</td>
+      <td>559.6</td>
     </tr>
   </tbody>
 </table>
@@ -1430,110 +1728,110 @@ display(HTML(escape_scores.query('not pass_ACE2bind_expr_filter & variant_class 
   </thead>
   <tbody>
     <tr>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>B1351</td>
       <td>lib1</td>
-      <td>beta_19-26-none-0-ref</td>
-      <td>beta_25-homotypic_6881-7812-abneg</td>
+      <td>beta_27-34-none-0-ref</td>
+      <td>beta_33-NHP_mosaic_0Z5-1000-abneg</td>
       <td>AACTTCAGGGAAGGAC</td>
-      <td>0.280070</td>
-      <td>0.000026</td>
-      <td>12764</td>
-      <td>3868</td>
+      <td>0.201681</td>
+      <td>1.802723e-05</td>
+      <td>13002</td>
+      <td>2726</td>
       <td>CAG176AAT</td>
       <td>1</td>
       <td>Q176N</td>
       <td>1</td>
       <td>1 nonsynonymous</td>
-      <td>528.0</td>
+      <td>399.0</td>
       <td>True</td>
       <td>True</td>
       <td>False</td>
       <td>False</td>
     </tr>
     <tr>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>B1351</td>
       <td>lib1</td>
-      <td>beta_19-26-none-0-ref</td>
-      <td>beta_25-homotypic_6881-7812-abneg</td>
+      <td>beta_27-34-none-0-ref</td>
+      <td>beta_33-NHP_mosaic_0Z5-1000-abneg</td>
       <td>CGGGGACTATATGATC</td>
-      <td>0.956249</td>
-      <td>0.000148</td>
-      <td>12080</td>
-      <td>12500</td>
+      <td>0.776603</td>
+      <td>1.127359e-04</td>
+      <td>11944</td>
+      <td>9644</td>
       <td>GTA37ATG CAG176AAA</td>
       <td>2</td>
       <td>V37M Q176K</td>
       <td>2</td>
       <td>&gt;1 nonsynonymous</td>
-      <td>528.0</td>
+      <td>399.0</td>
       <td>True</td>
       <td>True</td>
       <td>False</td>
       <td>False</td>
     </tr>
     <tr>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>B1351</td>
       <td>lib1</td>
-      <td>beta_19-26-none-0-ref</td>
-      <td>beta_25-homotypic_6881-7812-abneg</td>
-      <td>GATGACTGACGCCAAA</td>
-      <td>0.065613</td>
-      <td>0.000006</td>
-      <td>10767</td>
-      <td>764</td>
-      <td>CCT169TGG</td>
-      <td>1</td>
-      <td>P169W</td>
-      <td>1</td>
-      <td>1 nonsynonymous</td>
-      <td>528.0</td>
-      <td>True</td>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>homotypic_6881_7812</td>
-      <td>B1351</td>
-      <td>lib1</td>
-      <td>beta_19-26-none-0-ref</td>
-      <td>beta_25-homotypic_6881-7812-abneg</td>
-      <td>AGAATAAAATCGCTGG</td>
-      <td>0.833213</td>
-      <td>0.000140</td>
-      <td>10409</td>
-      <td>9385</td>
-      <td>CAG176AGA</td>
-      <td>1</td>
-      <td>Q176R</td>
-      <td>1</td>
-      <td>1 nonsynonymous</td>
-      <td>528.0</td>
-      <td>True</td>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>homotypic_6881_7812</td>
-      <td>B1351</td>
-      <td>lib1</td>
-      <td>beta_19-26-none-0-ref</td>
-      <td>beta_25-homotypic_6881-7812-abneg</td>
+      <td>beta_27-34-none-0-ref</td>
+      <td>beta_33-NHP_mosaic_0Z5-1000-abneg</td>
       <td>GACAGCATGATCGAGC</td>
-      <td>0.310869</td>
-      <td>0.000037</td>
-      <td>10343</td>
-      <td>3479</td>
+      <td>0.370935</td>
+      <td>4.746069e-05</td>
+      <td>10401</td>
+      <td>4011</td>
       <td>TTC47CAT</td>
       <td>1</td>
       <td>F47H</td>
       <td>1</td>
       <td>1 nonsynonymous</td>
-      <td>528.0</td>
+      <td>399.0</td>
+      <td>True</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>NHP_mosaic_0Z5_1000</td>
+      <td>B1351</td>
+      <td>lib1</td>
+      <td>beta_27-34-none-0-ref</td>
+      <td>beta_33-NHP_mosaic_0Z5-1000-abneg</td>
+      <td>TTGCTGATAGCTATAA</td>
+      <td>0.005269</td>
+      <td>4.939541e-07</td>
+      <td>10314</td>
+      <td>56</td>
+      <td>AAG26ATT</td>
+      <td>1</td>
+      <td>K26I</td>
+      <td>1</td>
+      <td>1 nonsynonymous</td>
+      <td>399.0</td>
+      <td>True</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>NHP_mosaic_0Z5_1000</td>
+      <td>B1351</td>
+      <td>lib1</td>
+      <td>beta_27-34-none-0-ref</td>
+      <td>beta_33-NHP_mosaic_0Z5-1000-abneg</td>
+      <td>AGAATAAAATCGCTGG</td>
+      <td>0.720164</td>
+      <td>1.207972e-04</td>
+      <td>10006</td>
+      <td>7492</td>
+      <td>CAG176AGA</td>
+      <td>1</td>
+      <td>Q176R</td>
+      <td>1</td>
+      <td>1 nonsynonymous</td>
+      <td>399.0</td>
       <td>True</td>
       <td>True</td>
       <td>False</td>
@@ -1751,22 +2049,22 @@ print(f"Read {len(escape_scores_primary)} scores.")
   <tbody>
     <tr>
       <th>0</th>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>B1351</td>
       <td>lib1</td>
-      <td>beta_19-26-none-0-ref</td>
-      <td>beta_25-homotypic_6881-7812-abneg</td>
-      <td>AAAGATACTACATGGT</td>
-      <td>0.001358</td>
-      <td>7.238612e-08</td>
-      <td>17357</td>
-      <td>25</td>
-      <td>CCT7AGA GCG190TCT</td>
-      <td>2</td>
-      <td>P7R A190S</td>
-      <td>2</td>
-      <td>&gt;1 nonsynonymous</td>
-      <td>528.0</td>
+      <td>beta_27-34-none-0-ref</td>
+      <td>beta_33-NHP_mosaic_0Z5-1000-abneg</td>
+      <td>GCATATGCTAGTAATG</td>
+      <td>0.003276</td>
+      <td>1.976165e-07</td>
+      <td>15999</td>
+      <td>54</td>
+      <td>ATA104ATG</td>
+      <td>1</td>
+      <td>I104M</td>
+      <td>1</td>
+      <td>1 nonsynonymous</td>
+      <td>399.0</td>
       <td>True</td>
       <td>True</td>
       <td>True</td>
@@ -1774,22 +2072,22 @@ print(f"Read {len(escape_scores_primary)} scores.")
     </tr>
     <tr>
       <th>1</th>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>B1351</td>
       <td>lib1</td>
-      <td>beta_19-26-none-0-ref</td>
-      <td>beta_25-homotypic_6881-7812-abneg</td>
-      <td>GCATATGCTAGTAATG</td>
-      <td>0.002734</td>
-      <td>1.545337e-07</td>
-      <td>16395</td>
-      <td>48</td>
-      <td>ATA104ATG</td>
+      <td>beta_27-34-none-0-ref</td>
+      <td>beta_33-NHP_mosaic_0Z5-1000-abneg</td>
+      <td>TAGCCAGCTAACCTAA</td>
+      <td>0.001737</td>
+      <td>1.099220e-07</td>
+      <td>15226</td>
+      <td>27</td>
+      <td>CTT5TGT</td>
       <td>1</td>
-      <td>I104M</td>
+      <td>L5C</td>
       <td>1</td>
       <td>1 nonsynonymous</td>
-      <td>528.0</td>
+      <td>399.0</td>
       <td>True</td>
       <td>True</td>
       <td>True</td>
@@ -1797,22 +2095,22 @@ print(f"Read {len(escape_scores_primary)} scores.")
     </tr>
     <tr>
       <th>2</th>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>B1351</td>
       <td>lib1</td>
-      <td>beta_19-26-none-0-ref</td>
-      <td>beta_25-homotypic_6881-7812-abneg</td>
-      <td>TAGCCAGCTAACCTAA</td>
-      <td>0.000220</td>
-      <td>1.386277e-08</td>
-      <td>14685</td>
-      <td>3</td>
-      <td>CTT5TGT</td>
-      <td>1</td>
-      <td>L5C</td>
-      <td>1</td>
-      <td>1 nonsynonymous</td>
-      <td>528.0</td>
+      <td>beta_27-34-none-0-ref</td>
+      <td>beta_33-NHP_mosaic_0Z5-1000-abneg</td>
+      <td>AAAGATACTACATGGT</td>
+      <td>0.004842</td>
+      <td>3.205908e-07</td>
+      <td>14599</td>
+      <td>73</td>
+      <td>CCT7AGA GCG190TCT</td>
+      <td>2</td>
+      <td>P7R A190S</td>
+      <td>2</td>
+      <td>&gt;1 nonsynonymous</td>
+      <td>399.0</td>
       <td>True</td>
       <td>True</td>
       <td>True</td>
@@ -1820,22 +2118,22 @@ print(f"Read {len(escape_scores_primary)} scores.")
     </tr>
     <tr>
       <th>3</th>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>B1351</td>
       <td>lib1</td>
-      <td>beta_19-26-none-0-ref</td>
-      <td>beta_25-homotypic_6881-7812-abneg</td>
+      <td>beta_27-34-none-0-ref</td>
+      <td>beta_33-NHP_mosaic_0Z5-1000-abneg</td>
       <td>GCACATCTAGTAAGAT</td>
-      <td>0.001147</td>
-      <td>7.521674e-08</td>
-      <td>14104</td>
-      <td>17</td>
+      <td>0.000920</td>
+      <td>6.271977e-08</td>
+      <td>14117</td>
+      <td>13</td>
       <td>TTT62TCT ACC148ACT</td>
       <td>2</td>
       <td>F62S</td>
       <td>1</td>
       <td>1 nonsynonymous</td>
-      <td>528.0</td>
+      <td>399.0</td>
       <td>True</td>
       <td>True</td>
       <td>True</td>
@@ -1843,22 +2141,22 @@ print(f"Read {len(escape_scores_primary)} scores.")
     </tr>
     <tr>
       <th>4</th>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>B1351</td>
       <td>lib1</td>
-      <td>beta_19-26-none-0-ref</td>
-      <td>beta_25-homotypic_6881-7812-abneg</td>
-      <td>ACAGATGATTACAAAA</td>
-      <td>0.001305</td>
-      <td>8.749763e-08</td>
-      <td>13805</td>
-      <td>19</td>
-      <td>TCT53GCT</td>
+      <td>beta_27-34-none-0-ref</td>
+      <td>beta_33-NHP_mosaic_0Z5-1000-abneg</td>
+      <td>GAGATCAGCGACTAGG</td>
+      <td>0.002162</td>
+      <td>1.588298e-07</td>
+      <td>13122</td>
+      <td>29</td>
+      <td>CGT78ATG</td>
       <td>1</td>
-      <td>S53A</td>
+      <td>R78M</td>
       <td>1</td>
       <td>1 nonsynonymous</td>
-      <td>528.0</td>
+      <td>399.0</td>
       <td>True</td>
       <td>True</td>
       <td>True</td>
@@ -1868,7 +2166,7 @@ print(f"Read {len(escape_scores_primary)} scores.")
 </table>
 
 
-    Read 299240 scores.
+    Read 606248 scores.
 
 
 ### Count number of barcodes per mutation and remove variants with >1 amino acid substitution
@@ -1952,43 +2250,43 @@ display(HTML(effects_df.head().to_html()))
   <tbody>
     <tr>
       <th>0</th>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>lib1</td>
       <td>A105S</td>
-      <td>0.014393</td>
+      <td>0.002236</td>
       <td>4</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>lib1</td>
       <td>A105T</td>
-      <td>0.005277</td>
+      <td>0.002973</td>
       <td>7</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>lib1</td>
       <td>A145C</td>
-      <td>0.011320</td>
+      <td>0.007359</td>
       <td>6</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>lib1</td>
       <td>A145E</td>
-      <td>0.009647</td>
+      <td>0.001960</td>
       <td>2</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>lib1</td>
       <td>A145F</td>
-      <td>0.001227</td>
-      <td>6</td>
+      <td>0.042456</td>
+      <td>8</td>
     </tr>
   </tbody>
 </table>
@@ -2087,8 +2385,8 @@ print(len(effects_df.query('nlibs==1')))
 ```
 
     Only taking average of mutations with escape fractions in >=2 libraries or with >=2 single-mutant measurements total.
-    13432
-    31376
+    26976
+    62816
 
 
 Plot the correlations of the escape fractions among the two libraries for all selections performed on both libraries. 
@@ -2215,39 +2513,39 @@ display(HTML(site_effects_df.head().to_html(index=False)))
   </thead>
   <tbody>
     <tr>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>average</td>
       <td>1</td>
-      <td>0.003763</td>
-      <td>0.067742</td>
+      <td>0.002850</td>
+      <td>0.051300</td>
     </tr>
     <tr>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>average</td>
       <td>2</td>
-      <td>0.002813</td>
-      <td>0.053452</td>
+      <td>0.004172</td>
+      <td>0.079266</td>
     </tr>
     <tr>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>average</td>
       <td>3</td>
-      <td>0.003752</td>
-      <td>0.071280</td>
+      <td>0.004001</td>
+      <td>0.076018</td>
     </tr>
     <tr>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>average</td>
       <td>4</td>
-      <td>0.003806</td>
-      <td>0.060901</td>
+      <td>0.006810</td>
+      <td>0.108959</td>
     </tr>
     <tr>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>average</td>
       <td>5</td>
-      <td>0.003541</td>
-      <td>0.067274</td>
+      <td>0.004997</td>
+      <td>0.094949</td>
     </tr>
   </tbody>
 </table>
@@ -2393,78 +2691,78 @@ escape_fracs_to_write.to_csv(config['escape_fracs'], index=False, float_format='
   </thead>
   <tbody>
     <tr>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>average</td>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>1</td>
       <td>331</td>
       <td>N</td>
       <td>A</td>
       <td>E</td>
       <td>331</td>
-      <td>0.000569</td>
-      <td>0.067742</td>
-      <td>0.003763</td>
+      <td>0.001268</td>
+      <td>0.0513</td>
+      <td>0.00285</td>
       <td>2</td>
     </tr>
     <tr>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>average</td>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>1</td>
       <td>331</td>
       <td>N</td>
       <td>C</td>
       <td>E</td>
       <td>331</td>
-      <td>0.000577</td>
-      <td>0.067742</td>
-      <td>0.003763</td>
+      <td>0.001439</td>
+      <td>0.0513</td>
+      <td>0.00285</td>
       <td>2</td>
     </tr>
     <tr>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>average</td>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>1</td>
       <td>331</td>
       <td>N</td>
       <td>D</td>
       <td>E</td>
       <td>331</td>
-      <td>0.000471</td>
-      <td>0.067742</td>
-      <td>0.003763</td>
+      <td>0.001029</td>
+      <td>0.0513</td>
+      <td>0.00285</td>
       <td>2</td>
     </tr>
     <tr>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>average</td>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>1</td>
       <td>331</td>
       <td>N</td>
       <td>E</td>
       <td>E</td>
       <td>331</td>
-      <td>0.002135</td>
-      <td>0.067742</td>
-      <td>0.003763</td>
+      <td>0.001221</td>
+      <td>0.0513</td>
+      <td>0.00285</td>
       <td>2</td>
     </tr>
     <tr>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>average</td>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>1</td>
       <td>331</td>
       <td>N</td>
       <td>F</td>
       <td>E</td>
       <td>331</td>
-      <td>0.002097</td>
-      <td>0.067742</td>
-      <td>0.003763</td>
+      <td>0.001222</td>
+      <td>0.0513</td>
+      <td>0.00285</td>
       <td>2</td>
     </tr>
   </tbody>

@@ -107,54 +107,54 @@ display(HTML(escape_fracs.head().to_html(index=False)))
   </thead>
   <tbody>
     <tr>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>331</td>
-      <td>0.067739</td>
-      <td>0.02603</td>
-      <td>3.002098</td>
-      <td>0.3745</td>
-      <td>0.022564</td>
-      <td>0.069506</td>
+      <td>0.051296</td>
+      <td>0.025270</td>
+      <td>0.425339</td>
+      <td>0.231</td>
+      <td>0.120600</td>
+      <td>0.109394</td>
     </tr>
     <tr>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>332</td>
-      <td>0.053453</td>
-      <td>0.01469</td>
-      <td>3.002098</td>
-      <td>0.3745</td>
-      <td>0.017805</td>
-      <td>0.039226</td>
+      <td>0.079267</td>
+      <td>0.008047</td>
+      <td>0.425339</td>
+      <td>0.231</td>
+      <td>0.186362</td>
+      <td>0.034835</td>
     </tr>
     <tr>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>333</td>
-      <td>0.071267</td>
-      <td>0.02790</td>
-      <td>3.002098</td>
-      <td>0.3745</td>
-      <td>0.023739</td>
-      <td>0.074499</td>
+      <td>0.076015</td>
+      <td>0.018900</td>
+      <td>0.425339</td>
+      <td>0.231</td>
+      <td>0.178716</td>
+      <td>0.081818</td>
     </tr>
     <tr>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>334</td>
-      <td>0.060900</td>
-      <td>0.02270</td>
-      <td>3.002098</td>
-      <td>0.3745</td>
-      <td>0.020286</td>
-      <td>0.060614</td>
+      <td>0.108956</td>
+      <td>0.017850</td>
+      <td>0.425339</td>
+      <td>0.231</td>
+      <td>0.256163</td>
+      <td>0.077273</td>
     </tr>
     <tr>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>335</td>
-      <td>0.067276</td>
-      <td>0.02528</td>
-      <td>3.002098</td>
-      <td>0.3745</td>
-      <td>0.022410</td>
-      <td>0.067503</td>
+      <td>0.094955</td>
+      <td>0.018610</td>
+      <td>0.425339</td>
+      <td>0.231</td>
+      <td>0.223245</td>
+      <td>0.080563</td>
     </tr>
   </tbody>
 </table>
@@ -211,18 +211,58 @@ for name, specs in output_pdbs_config.items():
 
     
     Making PDB mappings for 6m0j to data/pdbs/6M0J.pdb
-    Making mappings for 8 conditions.
+    Making mappings for 16 conditions.
     Mapping to the following chains: E
+      Writing B-factor re-assigned PDBs for NHP_mosaic_0Z5_1000 to:
+        results/pdb_outputs/NHP_mosaic_0Z5_1000_6m0j_total_escape.pdb
+        results/pdb_outputs/NHP_mosaic_0Z5_1000_6m0j_max_escape.pdb
+        results/pdb_outputs/NHP_mosaic_0Z5_1000_6m0j_norm_total_escape.pdb
+        results/pdb_outputs/NHP_mosaic_0Z5_1000_6m0j_norm_max_escape.pdb
+      Writing B-factor re-assigned PDBs for NHP_mosaic_AO2_1000 to:
+        results/pdb_outputs/NHP_mosaic_AO2_1000_6m0j_total_escape.pdb
+        results/pdb_outputs/NHP_mosaic_AO2_1000_6m0j_max_escape.pdb
+        results/pdb_outputs/NHP_mosaic_AO2_1000_6m0j_norm_total_escape.pdb
+        results/pdb_outputs/NHP_mosaic_AO2_1000_6m0j_norm_max_escape.pdb
+      Writing B-factor re-assigned PDBs for NHP_mosaic_AT5_1000 to:
+        results/pdb_outputs/NHP_mosaic_AT5_1000_6m0j_total_escape.pdb
+        results/pdb_outputs/NHP_mosaic_AT5_1000_6m0j_max_escape.pdb
+        results/pdb_outputs/NHP_mosaic_AT5_1000_6m0j_norm_total_escape.pdb
+        results/pdb_outputs/NHP_mosaic_AT5_1000_6m0j_norm_max_escape.pdb
+      Writing B-factor re-assigned PDBs for NHP_mosaic_MA292_1000 to:
+        results/pdb_outputs/NHP_mosaic_MA292_1000_6m0j_total_escape.pdb
+        results/pdb_outputs/NHP_mosaic_MA292_1000_6m0j_max_escape.pdb
+        results/pdb_outputs/NHP_mosaic_MA292_1000_6m0j_norm_total_escape.pdb
+        results/pdb_outputs/NHP_mosaic_MA292_1000_6m0j_norm_max_escape.pdb
+      Writing B-factor re-assigned PDBs for homotypic_6880_5000 to:
+        results/pdb_outputs/homotypic_6880_5000_6m0j_total_escape.pdb
+        results/pdb_outputs/homotypic_6880_5000_6m0j_max_escape.pdb
+        results/pdb_outputs/homotypic_6880_5000_6m0j_norm_total_escape.pdb
+        results/pdb_outputs/homotypic_6880_5000_6m0j_norm_max_escape.pdb
       Writing B-factor re-assigned PDBs for homotypic_6881_7812 to:
         results/pdb_outputs/homotypic_6881_7812_6m0j_total_escape.pdb
         results/pdb_outputs/homotypic_6881_7812_6m0j_max_escape.pdb
         results/pdb_outputs/homotypic_6881_7812_6m0j_norm_total_escape.pdb
         results/pdb_outputs/homotypic_6881_7812_6m0j_norm_max_escape.pdb
+      Writing B-factor re-assigned PDBs for homotypic_6882_5000 to:
+        results/pdb_outputs/homotypic_6882_5000_6m0j_total_escape.pdb
+        results/pdb_outputs/homotypic_6882_5000_6m0j_max_escape.pdb
+        results/pdb_outputs/homotypic_6882_5000_6m0j_norm_total_escape.pdb
+        results/pdb_outputs/homotypic_6882_5000_6m0j_norm_max_escape.pdb
       Writing B-factor re-assigned PDBs for homotypic_6883_7812 to:
         results/pdb_outputs/homotypic_6883_7812_6m0j_total_escape.pdb
         results/pdb_outputs/homotypic_6883_7812_6m0j_max_escape.pdb
         results/pdb_outputs/homotypic_6883_7812_6m0j_norm_total_escape.pdb
         results/pdb_outputs/homotypic_6883_7812_6m0j_norm_max_escape.pdb
+      Writing B-factor re-assigned PDBs for homotypic_6884_5000 to:
+        results/pdb_outputs/homotypic_6884_5000_6m0j_total_escape.pdb
+        results/pdb_outputs/homotypic_6884_5000_6m0j_max_escape.pdb
+        results/pdb_outputs/homotypic_6884_5000_6m0j_norm_total_escape.pdb
+        results/pdb_outputs/homotypic_6884_5000_6m0j_norm_max_escape.pdb
+      Writing B-factor re-assigned PDBs for homotypic_6885_5000 to:
+        results/pdb_outputs/homotypic_6885_5000_6m0j_total_escape.pdb
+        results/pdb_outputs/homotypic_6885_5000_6m0j_max_escape.pdb
+        results/pdb_outputs/homotypic_6885_5000_6m0j_norm_total_escape.pdb
+        results/pdb_outputs/homotypic_6885_5000_6m0j_norm_max_escape.pdb
       Writing B-factor re-assigned PDBs for mosaic_6848_3125 to:
         results/pdb_outputs/mosaic_6848_3125_6m0j_total_escape.pdb
         results/pdb_outputs/mosaic_6848_3125_6m0j_max_escape.pdb
@@ -255,18 +295,58 @@ for name, specs in output_pdbs_config.items():
         results/pdb_outputs/mosaic_6853_3125_6m0j_norm_max_escape.pdb
     
     Making PDB mappings for 7LYQ to data/pdbs/7LYQ.pdb
-    Making mappings for 8 conditions.
+    Making mappings for 16 conditions.
     Mapping to the following chains: B
+      Writing B-factor re-assigned PDBs for NHP_mosaic_0Z5_1000 to:
+        results/pdb_outputs/NHP_mosaic_0Z5_1000_7LYQ_total_escape.pdb
+        results/pdb_outputs/NHP_mosaic_0Z5_1000_7LYQ_max_escape.pdb
+        results/pdb_outputs/NHP_mosaic_0Z5_1000_7LYQ_norm_total_escape.pdb
+        results/pdb_outputs/NHP_mosaic_0Z5_1000_7LYQ_norm_max_escape.pdb
+      Writing B-factor re-assigned PDBs for NHP_mosaic_AO2_1000 to:
+        results/pdb_outputs/NHP_mosaic_AO2_1000_7LYQ_total_escape.pdb
+        results/pdb_outputs/NHP_mosaic_AO2_1000_7LYQ_max_escape.pdb
+        results/pdb_outputs/NHP_mosaic_AO2_1000_7LYQ_norm_total_escape.pdb
+        results/pdb_outputs/NHP_mosaic_AO2_1000_7LYQ_norm_max_escape.pdb
+      Writing B-factor re-assigned PDBs for NHP_mosaic_AT5_1000 to:
+        results/pdb_outputs/NHP_mosaic_AT5_1000_7LYQ_total_escape.pdb
+        results/pdb_outputs/NHP_mosaic_AT5_1000_7LYQ_max_escape.pdb
+        results/pdb_outputs/NHP_mosaic_AT5_1000_7LYQ_norm_total_escape.pdb
+        results/pdb_outputs/NHP_mosaic_AT5_1000_7LYQ_norm_max_escape.pdb
+      Writing B-factor re-assigned PDBs for NHP_mosaic_MA292_1000 to:
+        results/pdb_outputs/NHP_mosaic_MA292_1000_7LYQ_total_escape.pdb
+        results/pdb_outputs/NHP_mosaic_MA292_1000_7LYQ_max_escape.pdb
+        results/pdb_outputs/NHP_mosaic_MA292_1000_7LYQ_norm_total_escape.pdb
+        results/pdb_outputs/NHP_mosaic_MA292_1000_7LYQ_norm_max_escape.pdb
+      Writing B-factor re-assigned PDBs for homotypic_6880_5000 to:
+        results/pdb_outputs/homotypic_6880_5000_7LYQ_total_escape.pdb
+        results/pdb_outputs/homotypic_6880_5000_7LYQ_max_escape.pdb
+        results/pdb_outputs/homotypic_6880_5000_7LYQ_norm_total_escape.pdb
+        results/pdb_outputs/homotypic_6880_5000_7LYQ_norm_max_escape.pdb
       Writing B-factor re-assigned PDBs for homotypic_6881_7812 to:
         results/pdb_outputs/homotypic_6881_7812_7LYQ_total_escape.pdb
         results/pdb_outputs/homotypic_6881_7812_7LYQ_max_escape.pdb
         results/pdb_outputs/homotypic_6881_7812_7LYQ_norm_total_escape.pdb
         results/pdb_outputs/homotypic_6881_7812_7LYQ_norm_max_escape.pdb
+      Writing B-factor re-assigned PDBs for homotypic_6882_5000 to:
+        results/pdb_outputs/homotypic_6882_5000_7LYQ_total_escape.pdb
+        results/pdb_outputs/homotypic_6882_5000_7LYQ_max_escape.pdb
+        results/pdb_outputs/homotypic_6882_5000_7LYQ_norm_total_escape.pdb
+        results/pdb_outputs/homotypic_6882_5000_7LYQ_norm_max_escape.pdb
       Writing B-factor re-assigned PDBs for homotypic_6883_7812 to:
         results/pdb_outputs/homotypic_6883_7812_7LYQ_total_escape.pdb
         results/pdb_outputs/homotypic_6883_7812_7LYQ_max_escape.pdb
         results/pdb_outputs/homotypic_6883_7812_7LYQ_norm_total_escape.pdb
         results/pdb_outputs/homotypic_6883_7812_7LYQ_norm_max_escape.pdb
+      Writing B-factor re-assigned PDBs for homotypic_6884_5000 to:
+        results/pdb_outputs/homotypic_6884_5000_7LYQ_total_escape.pdb
+        results/pdb_outputs/homotypic_6884_5000_7LYQ_max_escape.pdb
+        results/pdb_outputs/homotypic_6884_5000_7LYQ_norm_total_escape.pdb
+        results/pdb_outputs/homotypic_6884_5000_7LYQ_norm_max_escape.pdb
+      Writing B-factor re-assigned PDBs for homotypic_6885_5000 to:
+        results/pdb_outputs/homotypic_6885_5000_7LYQ_total_escape.pdb
+        results/pdb_outputs/homotypic_6885_5000_7LYQ_max_escape.pdb
+        results/pdb_outputs/homotypic_6885_5000_7LYQ_norm_total_escape.pdb
+        results/pdb_outputs/homotypic_6885_5000_7LYQ_norm_max_escape.pdb
       Writing B-factor re-assigned PDBs for mosaic_6848_3125 to:
         results/pdb_outputs/mosaic_6848_3125_7LYQ_total_escape.pdb
         results/pdb_outputs/mosaic_6848_3125_7LYQ_max_escape.pdb

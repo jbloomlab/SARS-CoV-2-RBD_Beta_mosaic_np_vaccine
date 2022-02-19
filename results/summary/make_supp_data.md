@@ -335,75 +335,75 @@ display(HTML(dms_view_df.head().to_html(index=False)))
   </thead>
   <tbody>
     <tr>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>1</td>
       <td>331</td>
       <td>N</td>
       <td>A</td>
       <td>331</td>
-      <td>0.000569</td>
-      <td>0.06774</td>
-      <td>0.02603</td>
+      <td>0.001268</td>
+      <td>0.0513</td>
+      <td>0.02527</td>
       <td>#662505</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>1</td>
       <td>331</td>
       <td>N</td>
       <td>C</td>
       <td>331</td>
-      <td>0.000576</td>
-      <td>0.06774</td>
-      <td>0.02603</td>
+      <td>0.001439</td>
+      <td>0.0513</td>
+      <td>0.02527</td>
       <td>#7a2b05</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>1</td>
       <td>331</td>
       <td>N</td>
       <td>D</td>
       <td>331</td>
-      <td>0.000471</td>
-      <td>0.06774</td>
-      <td>0.02603</td>
+      <td>0.001029</td>
+      <td>0.0513</td>
+      <td>0.02527</td>
       <td>#662505</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>1</td>
       <td>331</td>
       <td>N</td>
       <td>E</td>
       <td>331</td>
-      <td>0.002135</td>
-      <td>0.06774</td>
-      <td>0.02603</td>
+      <td>0.001221</td>
+      <td>0.0513</td>
+      <td>0.02527</td>
       <td>#662505</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>1</td>
       <td>331</td>
       <td>N</td>
       <td>F</td>
       <td>331</td>
-      <td>0.002097</td>
-      <td>0.06774</td>
-      <td>0.02603</td>
+      <td>0.001222</td>
+      <td>0.0513</td>
+      <td>0.02527</td>
       <td>#762905</td>
       <td>NaN</td>
       <td>NaN</td>

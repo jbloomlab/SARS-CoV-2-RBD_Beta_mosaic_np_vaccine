@@ -88,63 +88,63 @@ display(HTML(escape_fracs.head().to_html(index=False)))
   </thead>
   <tbody>
     <tr>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>331</td>
       <td>N</td>
       <td>A</td>
       <td>E</td>
       <td>331</td>
-      <td>0.000569</td>
-      <td>0.06774</td>
-      <td>0.003763</td>
+      <td>0.001268</td>
+      <td>0.0513</td>
+      <td>0.00285</td>
       <td>2</td>
     </tr>
     <tr>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>331</td>
       <td>N</td>
       <td>C</td>
       <td>E</td>
       <td>331</td>
-      <td>0.000576</td>
-      <td>0.06774</td>
-      <td>0.003763</td>
+      <td>0.001439</td>
+      <td>0.0513</td>
+      <td>0.00285</td>
       <td>2</td>
     </tr>
     <tr>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>331</td>
       <td>N</td>
       <td>D</td>
       <td>E</td>
       <td>331</td>
-      <td>0.000471</td>
-      <td>0.06774</td>
-      <td>0.003763</td>
+      <td>0.001029</td>
+      <td>0.0513</td>
+      <td>0.00285</td>
       <td>2</td>
     </tr>
     <tr>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>331</td>
       <td>N</td>
       <td>E</td>
       <td>E</td>
       <td>331</td>
-      <td>0.002135</td>
-      <td>0.06774</td>
-      <td>0.003763</td>
+      <td>0.001221</td>
+      <td>0.0513</td>
+      <td>0.00285</td>
       <td>2</td>
     </tr>
     <tr>
-      <td>homotypic_6881_7812</td>
+      <td>NHP_mosaic_0Z5_1000</td>
       <td>331</td>
       <td>N</td>
       <td>F</td>
       <td>E</td>
       <td>331</td>
-      <td>0.002097</td>
-      <td>0.06774</td>
-      <td>0.003763</td>
+      <td>0.001222</td>
+      <td>0.0513</td>
+      <td>0.00285</td>
       <td>2</td>
     </tr>
   </tbody>
@@ -233,9 +233,9 @@ site_threshold_df = (
     Sites are also called as significant if they have **any** mutation with escape fraction > 0.5
 
 
-    /loc/scratch/46862756/ipykernel_16123/821032434.py:21: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
-    /loc/scratch/46862756/ipykernel_16123/821032434.py:21: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
-    /loc/scratch/46862756/ipykernel_16123/821032434.py:21: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+    /loc/scratch/49497549/ipykernel_19252/821032434.py:21: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+    /loc/scratch/49497549/ipykernel_19252/821032434.py:21: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+    /loc/scratch/49497549/ipykernel_19252/821032434.py:21: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
 
 
 Now plot the selection for all sites for all conditions, indicating which sites are strong escape and using lines to draw the three thresholds:
@@ -335,15 +335,15 @@ strong_sites.to_csv(config['strong_escape_sites'], index=False)
   <tbody>
     <tr>
       <th>default</th>
-      <td>17</td>
+      <td>27</td>
     </tr>
     <tr>
       <th>sensitive</th>
-      <td>30</td>
+      <td>46</td>
     </tr>
     <tr>
       <th>sensitive_max_mut</th>
-      <td>30</td>
+      <td>46</td>
     </tr>
   </tbody>
 </table>
@@ -378,98 +378,98 @@ strong_sites.to_csv(config['strong_escape_sites'], index=False)
   <tbody>
     <tr>
       <th>0</th>
-      <td>homotypic_6881_7812</td>
-      <td>357</td>
-      <td>0.6560</td>
-      <td>0.1780</td>
+      <td>homotypic_6880_5000</td>
+      <td>346</td>
+      <td>0.8214</td>
+      <td>0.09723</td>
       <td>default</td>
-      <td>0.05654</td>
-      <td>3.002</td>
-      <td>0.5654</td>
+      <td>0.07798</td>
+      <td>5.847</td>
+      <td>0.7798</td>
       <td>True</td>
-      <td>0.3002</td>
+      <td>0.5847</td>
       <td>True</td>
       <td>0</td>
       <td>True</td>
       <td>False</td>
       <td>True</td>
-      <td>3</td>
+      <td>9</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>homotypic_6881_7812</td>
-      <td>468</td>
-      <td>0.7526</td>
-      <td>0.3160</td>
+      <td>homotypic_6880_5000</td>
+      <td>472</td>
+      <td>1.0670</td>
+      <td>0.21860</td>
       <td>default</td>
-      <td>0.05654</td>
-      <td>3.002</td>
-      <td>0.5654</td>
+      <td>0.07798</td>
+      <td>5.847</td>
+      <td>0.7798</td>
       <td>True</td>
-      <td>0.3002</td>
+      <td>0.5847</td>
       <td>True</td>
       <td>0</td>
       <td>True</td>
       <td>False</td>
       <td>True</td>
-      <td>3</td>
+      <td>9</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>homotypic_6881_7812</td>
-      <td>484</td>
-      <td>3.0020</td>
-      <td>0.3745</td>
+      <td>homotypic_6880_5000</td>
+      <td>474</td>
+      <td>1.1120</td>
+      <td>0.82580</td>
       <td>default</td>
-      <td>0.05654</td>
-      <td>3.002</td>
-      <td>0.5654</td>
+      <td>0.07798</td>
+      <td>5.847</td>
+      <td>0.7798</td>
       <td>True</td>
-      <td>0.3002</td>
+      <td>0.5847</td>
       <td>True</td>
       <td>0</td>
       <td>True</td>
       <td>False</td>
       <td>True</td>
-      <td>3</td>
+      <td>9</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>homotypic_6883_7812</td>
-      <td>352</td>
-      <td>0.7641</td>
-      <td>0.2822</td>
+      <td>homotypic_6880_5000</td>
+      <td>476</td>
+      <td>0.8984</td>
+      <td>0.22810</td>
       <td>default</td>
-      <td>0.04895</td>
-      <td>3.351</td>
-      <td>0.4895</td>
+      <td>0.07798</td>
+      <td>5.847</td>
+      <td>0.7798</td>
       <td>True</td>
-      <td>0.3351</td>
+      <td>0.5847</td>
       <td>True</td>
       <td>0</td>
       <td>True</td>
       <td>False</td>
       <td>True</td>
-      <td>4</td>
+      <td>9</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>homotypic_6883_7812</td>
-      <td>357</td>
-      <td>0.5230</td>
-      <td>0.1006</td>
+      <td>homotypic_6880_5000</td>
+      <td>477</td>
+      <td>1.7640</td>
+      <td>0.15560</td>
       <td>default</td>
-      <td>0.04895</td>
-      <td>3.351</td>
-      <td>0.4895</td>
+      <td>0.07798</td>
+      <td>5.847</td>
+      <td>0.7798</td>
       <td>True</td>
-      <td>0.3351</td>
+      <td>0.5847</td>
       <td>True</td>
       <td>0</td>
       <td>True</td>
       <td>False</td>
       <td>True</td>
-      <td>4</td>
+      <td>9</td>
     </tr>
   </tbody>
 </table>

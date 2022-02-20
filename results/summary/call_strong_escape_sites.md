@@ -233,9 +233,9 @@ site_threshold_df = (
     Sites are also called as significant if they have **any** mutation with escape fraction > 0.5
 
 
-    /loc/scratch/49497549/ipykernel_19252/821032434.py:21: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
-    /loc/scratch/49497549/ipykernel_19252/821032434.py:21: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
-    /loc/scratch/49497549/ipykernel_19252/821032434.py:21: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+    /loc/scratch/49517439/ipykernel_12564/821032434.py:21: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+    /loc/scratch/49517439/ipykernel_12564/821032434.py:21: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+    /loc/scratch/49517439/ipykernel_12564/821032434.py:21: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
 
 
 Now plot the selection for all sites for all conditions, indicating which sites are strong escape and using lines to draw the three thresholds:

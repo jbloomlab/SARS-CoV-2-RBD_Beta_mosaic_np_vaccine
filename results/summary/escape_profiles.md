@@ -650,11 +650,11 @@ with multiprocessing.Pool(ncpus) as pool:
         
 ```
 
-    Drawing 3 profiles using 16 CPUs...
+    Drawing 9 profiles using 16 CPUs...
     
     Plotted profile 1 to:
-     results/escape_profiles/B1351_stackedlogo.pdf
-     results/escape_profiles/B1351_stackedlogo.png.
+     results/escape_profiles/all_stackedlogo.pdf
+     results/escape_profiles/all_stackedlogo.png.
 
 
 
@@ -665,8 +665,8 @@ with multiprocessing.Pool(ncpus) as pool:
 
     
     Plotted profile 2 to:
-     results/escape_profiles/B1351_color_by_bind_stackedlogo.pdf
-     results/escape_profiles/B1351_color_by_bind_stackedlogo.png.
+     results/escape_profiles/all_color_by_bind_stackedlogo.pdf
+     results/escape_profiles/all_color_by_bind_stackedlogo.png.
 
 
 
@@ -677,13 +677,85 @@ with multiprocessing.Pool(ncpus) as pool:
 
     
     Plotted profile 3 to:
-     results/escape_profiles/B1351_color_by_expr_stackedlogo.pdf
-     results/escape_profiles/B1351_color_by_expr_stackedlogo.png.
+     results/escape_profiles/all_color_by_expr_stackedlogo.pdf
+     results/escape_profiles/all_color_by_expr_stackedlogo.png.
 
 
 
     
 ![png](escape_profiles_files/escape_profiles_26_5.png)
+    
+
+
+    
+    Plotted profile 4 to:
+     results/escape_profiles/mice_stackedlogo.pdf
+     results/escape_profiles/mice_stackedlogo.png.
+
+
+
+    
+![png](escape_profiles_files/escape_profiles_26_7.png)
+    
+
+
+    
+    Plotted profile 5 to:
+     results/escape_profiles/mice_color_by_bind_stackedlogo.pdf
+     results/escape_profiles/mice_color_by_bind_stackedlogo.png.
+
+
+
+    
+![png](escape_profiles_files/escape_profiles_26_9.png)
+    
+
+
+    
+    Plotted profile 6 to:
+     results/escape_profiles/mice_color_by_expr_stackedlogo.pdf
+     results/escape_profiles/mice_color_by_expr_stackedlogo.png.
+
+
+
+    
+![png](escape_profiles_files/escape_profiles_26_11.png)
+    
+
+
+    
+    Plotted profile 7 to:
+     results/escape_profiles/NHP_stackedlogo.pdf
+     results/escape_profiles/NHP_stackedlogo.png.
+
+
+
+    
+![png](escape_profiles_files/escape_profiles_26_13.png)
+    
+
+
+    
+    Plotted profile 8 to:
+     results/escape_profiles/NHP_color_by_bind_stackedlogo.pdf
+     results/escape_profiles/NHP_color_by_bind_stackedlogo.png.
+
+
+
+    
+![png](escape_profiles_files/escape_profiles_26_15.png)
+    
+
+
+    
+    Plotted profile 9 to:
+     results/escape_profiles/NHP_color_by_expr_stackedlogo.pdf
+     results/escape_profiles/NHP_color_by_expr_stackedlogo.png.
+
+
+
+    
+![png](escape_profiles_files/escape_profiles_26_17.png)
     
 
 

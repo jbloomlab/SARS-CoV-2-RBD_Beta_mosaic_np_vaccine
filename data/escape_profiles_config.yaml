@@ -32,7 +32,7 @@
 #   dmslogo_draw_logo_kwargs -> any keyword arguments to dmslogo.draw_logo
 #   dmslogo_draw_line_kwargs -> any keyword arguments to dmslogo.draw_line
 
-B1351:
+all:
   conditions:
     mosaic_6848_3125: mosaic 6848
     mosaic_6850_3125: mosaic 6850
@@ -70,78 +70,242 @@ B1351:
       369: [gray, 0.15]
       390: [gray, 0.15]
       396: [gray, 0.15]
+      468: [gray, 0.15]
     mosaic 6850:
       357: [gray, 0.15]
       369: [gray, 0.15]
       390: [gray, 0.15]
       396: [gray, 0.15]
+      468: [gray, 0.15]
     mosaic 6851:
       357: [gray, 0.15]
       369: [gray, 0.15]
       390: [gray, 0.15]
       396: [gray, 0.15]
+      468: [gray, 0.15]
     mosaic 6853:
       357: [gray, 0.15]
       369: [gray, 0.15]
       390: [gray, 0.15]
       396: [gray, 0.15]
+      468: [gray, 0.15]
     mosaic 6849:
       357: [gray, 0.15]
       369: [gray, 0.15]
       390: [gray, 0.15]
       396: [gray, 0.15]
+      468: [gray, 0.15]
     mosaic 6852:
       357: [gray, 0.15]
       369: [gray, 0.15]
       390: [gray, 0.15]
       396: [gray, 0.15]
+      468: [gray, 0.15]
     homotypic 6881:
       357: [gray, 0.15]
       369: [gray, 0.15]
       390: [gray, 0.15]
       396: [gray, 0.15]
+      468: [gray, 0.15]
     homotypic 6883:
       357: [gray, 0.15]
       369: [gray, 0.15]
       390: [gray, 0.15]
       396: [gray, 0.15]
+      468: [gray, 0.15]
     homotypic 6880:
       357: [gray, 0.15]
       369: [gray, 0.15]
       390: [gray, 0.15]
       396: [gray, 0.15]
+      468: [gray, 0.15]
     homotypic 6882:
       357: [gray, 0.15]
       369: [gray, 0.15]
       390: [gray, 0.15]
       396: [gray, 0.15]
+      468: [gray, 0.15]
     homotypic 6884:
       357: [gray, 0.15]
       369: [gray, 0.15]
       390: [gray, 0.15]
       396: [gray, 0.15]
+      468: [gray, 0.15]
     homotypic 6885:
       357: [gray, 0.15]
       369: [gray, 0.15]
       390: [gray, 0.15]
       396: [gray, 0.15]
+      468: [gray, 0.15]
     NHP mosaic MA292:
       357: [gray, 0.15]
       369: [gray, 0.15]
       390: [gray, 0.15]
       396: [gray, 0.15]
+      468: [gray, 0.15]
     NHP mosaic AO2:
       357: [gray, 0.15]
       369: [gray, 0.15]
       390: [gray, 0.15]
       396: [gray, 0.15]
+      468: [gray, 0.15]
     NHP mosaic 0Z5:
       357: [gray, 0.15]
       369: [gray, 0.15]
       390: [gray, 0.15]
       396: [gray, 0.15]
+      468: [gray, 0.15]
     NHP mosaic AT5:
       357: [gray, 0.15]
       369: [gray, 0.15]
       390: [gray, 0.15]
       396: [gray, 0.15]
+      468: [gray, 0.15]
+
+mice:
+  conditions:
+    mosaic_6848_3125: mosaic 6848
+    mosaic_6850_3125: mosaic 6850
+    mosaic_6851_3125: mosaic 6851
+    mosaic_6853_3125: mosaic 6853
+    mosaic_6849_3125: mosaic 6849
+    mosaic_6852_3125: mosaic 6852
+    homotypic_6881_7812: homotypic 6881
+    homotypic_6883_7812: homotypic 6883
+    homotypic_6880_5000: homotypic 6880
+    homotypic_6882_5000: homotypic 6882
+    homotypic_6884_5000: homotypic 6884
+    homotypic_6885_5000: homotypic 6885
+  plot_auto_identified_sites: default
+  add_sites: [365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,477,478,484,501]
+  exclude_sites: [336, 361]
+  site_color_scheme: barnes_serum_epitopes
+  color_by_dms: True
+  make_supp_data: True
+  dmslogo_facet_plot_kwargs:
+    height_per_ax: 2.0
+  dmslogo_draw_line_kwargs:
+    widthscale: 0.5
+    axisfontscale: 1.5
+  dmslogo_draw_logo_kwargs:
+    widthscale: 0.75
+    axisfontscale: 1.5
+  shade_sites: # add shading to sites that are predicted NLGKI
+    mosaic 6848:
+      357: [gray, 0.15]
+      369: [gray, 0.15]
+      390: [gray, 0.15]
+      396: [gray, 0.15]
+      468: [gray, 0.15]
+    mosaic 6850:
+      357: [gray, 0.15]
+      369: [gray, 0.15]
+      390: [gray, 0.15]
+      396: [gray, 0.15]
+      468: [gray, 0.15]
+    mosaic 6851:
+      357: [gray, 0.15]
+      369: [gray, 0.15]
+      390: [gray, 0.15]
+      396: [gray, 0.15]
+      468: [gray, 0.15]
+    mosaic 6853:
+      357: [gray, 0.15]
+      369: [gray, 0.15]
+      390: [gray, 0.15]
+      396: [gray, 0.15]
+      468: [gray, 0.15]
+    mosaic 6849:
+      357: [gray, 0.15]
+      369: [gray, 0.15]
+      390: [gray, 0.15]
+      396: [gray, 0.15]
+      468: [gray, 0.15]
+    mosaic 6852:
+      357: [gray, 0.15]
+      369: [gray, 0.15]
+      390: [gray, 0.15]
+      396: [gray, 0.15]
+      468: [gray, 0.15]
+    homotypic 6881:
+      357: [gray, 0.15]
+      369: [gray, 0.15]
+      390: [gray, 0.15]
+      396: [gray, 0.15]
+      468: [gray, 0.15]
+    homotypic 6883:
+      357: [gray, 0.15]
+      369: [gray, 0.15]
+      390: [gray, 0.15]
+      396: [gray, 0.15]
+      468: [gray, 0.15]
+    homotypic 6880:
+      357: [gray, 0.15]
+      369: [gray, 0.15]
+      390: [gray, 0.15]
+      396: [gray, 0.15]
+      468: [gray, 0.15]
+    homotypic 6882:
+      357: [gray, 0.15]
+      369: [gray, 0.15]
+      390: [gray, 0.15]
+      396: [gray, 0.15]
+      468: [gray, 0.15]
+    homotypic 6884:
+      357: [gray, 0.15]
+      369: [gray, 0.15]
+      390: [gray, 0.15]
+      396: [gray, 0.15]
+      468: [gray, 0.15]
+    homotypic 6885:
+      357: [gray, 0.15]
+      369: [gray, 0.15]
+      390: [gray, 0.15]
+      396: [gray, 0.15]
+      468: [gray, 0.15]
+
+NHP:
+  conditions:
+    NHP_mosaic_MA292_1000: NHP mosaic MA292
+    NHP_mosaic_AO2_1000: NHP mosaic AO2
+    NHP_mosaic_0Z5_1000: NHP mosaic 0Z5
+    NHP_mosaic_AT5_1000: NHP mosaic AT5
+  plot_auto_identified_sites: sensitive
+  add_sites: [357, 365,369,378,382,383,384,385,386,417,439,443,444,445,446,447,448,449,450,451,452,455,456,477,478,484,501]
+  exclude_sites: [336, 361]
+  site_color_scheme: barnes_serum_epitopes
+  color_by_dms: True
+  make_supp_data: True
+  dmslogo_facet_plot_kwargs:
+    height_per_ax: 2.0
+  dmslogo_draw_line_kwargs:
+    widthscale: 0.5
+    axisfontscale: 1.5
+  dmslogo_draw_logo_kwargs:
+    widthscale: 0.75
+    axisfontscale: 1.5
+  shade_sites: # add shading to sites that are predicted NLGKI
+    NHP mosaic MA292:
+      357: [gray, 0.15]
+      369: [gray, 0.15]
+      390: [gray, 0.15]
+      396: [gray, 0.15]
+      468: [gray, 0.15]
+    NHP mosaic AO2:
+      357: [gray, 0.15]
+      369: [gray, 0.15]
+      390: [gray, 0.15]
+      396: [gray, 0.15]
+      468: [gray, 0.15]
+    NHP mosaic 0Z5:
+      357: [gray, 0.15]
+      369: [gray, 0.15]
+      390: [gray, 0.15]
+      396: [gray, 0.15]
+      468: [gray, 0.15]
+    NHP mosaic AT5:
+      357: [gray, 0.15]
+      369: [gray, 0.15]
+      390: [gray, 0.15]
+      396: [gray, 0.15]
+      468: [gray, 0.15]

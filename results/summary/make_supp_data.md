@@ -68,7 +68,9 @@ print('Making supplementary data for the following condition sets:\n  ' + '\n  '
 ```
 
     Making supplementary data for the following condition sets:
-      B1351
+      all
+      mice
+      NHP
 
 
 Read the escape fractions
@@ -185,7 +187,7 @@ for metric_type, (set_name, condition_set) in itertools.product(['mutation', 'si
 ```
 
     
-    Plotting correlations of mutation escape for B1351
+    Plotting correlations of mutation escape for all
 
 
     /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
@@ -198,7 +200,7 @@ for metric_type, (set_name, condition_set) in itertools.product(['mutation', 'si
     
 
 
-    Saving plot to results/supp_data/B1351-mutation-corr.pdf
+    Saving plot to results/supp_data/all-mutation-corr.pdf
 
 
     /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
@@ -206,7 +208,7 @@ for metric_type, (set_name, condition_set) in itertools.product(['mutation', 'si
 
 
     
-    Plotting correlations of site escape for B1351
+    Plotting correlations of mutation escape for mice
 
 
     /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
@@ -219,7 +221,91 @@ for metric_type, (set_name, condition_set) in itertools.product(['mutation', 'si
     
 
 
-    Saving plot to results/supp_data/B1351-site-corr.pdf
+    Saving plot to results/supp_data/mice-mutation-corr.pdf
+
+
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+
+
+    
+    Plotting correlations of mutation escape for NHP
+
+
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+
+
+
+    
+![png](make_supp_data_files/make_supp_data_16_12.png)
+    
+
+
+    Saving plot to results/supp_data/NHP-mutation-corr.pdf
+
+
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+
+
+    
+    Plotting correlations of site escape for all
+
+
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+
+
+
+    
+![png](make_supp_data_files/make_supp_data_16_17.png)
+    
+
+
+    Saving plot to results/supp_data/all-site-corr.pdf
+
+
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+
+
+    
+    Plotting correlations of site escape for mice
+
+
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+
+
+
+    
+![png](make_supp_data_files/make_supp_data_16_22.png)
+    
+
+
+    Saving plot to results/supp_data/mice-site-corr.pdf
+
+
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+
+
+    
+    Plotting correlations of site escape for NHP
+
+
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+
+
+
+    
+![png](make_supp_data_files/make_supp_data_16_27.png)
+    
+
+
+    Saving plot to results/supp_data/NHP-site-corr.pdf
 
 
     /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
@@ -264,8 +350,14 @@ for set_name, condition_set in condition_sets.items():
 ```
 
     
-    Raw data for B1351:
-    Writing to results/supp_data/B1351_raw_data.csv
+    Raw data for all:
+    Writing to results/supp_data/all_raw_data.csv
+    
+    Raw data for mice:
+    Writing to results/supp_data/mice_raw_data.csv
+    
+    Raw data for NHP:
+    Writing to results/supp_data/NHP_raw_data.csv
 
 
 ## Data for `dms-view`:
@@ -448,8 +540,12 @@ for set_name, condition_set in condition_sets.items():
         df.to_csv(csv_file, index=False, float_format='%.4g')
 ```
 
-    Writing `dms-view` input file for B1351 mapped to PDB 6m0j to results/supp_data/B1351_6m0j_dms-view_data.csv
-    Writing `dms-view` input file for B1351 mapped to PDB 7LYQ to results/supp_data/B1351_7LYQ_dms-view_data.csv
+    Writing `dms-view` input file for all mapped to PDB 6m0j to results/supp_data/all_6m0j_dms-view_data.csv
+    Writing `dms-view` input file for all mapped to PDB 7LYQ to results/supp_data/all_7LYQ_dms-view_data.csv
+    Writing `dms-view` input file for mice mapped to PDB 6m0j to results/supp_data/mice_6m0j_dms-view_data.csv
+    Writing `dms-view` input file for mice mapped to PDB 7LYQ to results/supp_data/mice_7LYQ_dms-view_data.csv
+    Writing `dms-view` input file for NHP mapped to PDB 6m0j to results/supp_data/NHP_6m0j_dms-view_data.csv
+    Writing `dms-view` input file for NHP mapped to PDB 7LYQ to results/supp_data/NHP_7LYQ_dms-view_data.csv
 
 
 

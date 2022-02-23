@@ -152,6 +152,7 @@ for supergroup, subgroup in line_plot_config.items():
 
     lineplot_df = pd.DataFrame()
     annotation_df = pd.DataFrame()
+    simple_line_df = pd.DataFrame()
 
     for name, conditions in subgroup.items():
         
@@ -172,6 +173,16 @@ for supergroup, subgroup in line_plot_config.items():
                     .assign(group_name=name,)
                    )
         annotation_df = pd.concat([annotation_df, label_df], axis=0, ignore_index=True)
+        
+        line_df = (pd.DataFrame({'xmin':[339.5, 461.5, 471.5],
+                                 'xmax': [408.5, 468.5, 489.5],
+                                 'epitope': ['more conserved', 'more conserved', 'more variable'],
+                                 'label': ['more conserved', '', 'more variable']
+                                }
+                               )
+                   .assign(group_name=name,)
+                  )
+        simple_line_df = pd.concat([simple_line_df, line_df], axis=0, ignore_index=True)
 
     lineplot_df = (lineplot_df
         [['condition', 'site', 'site_escape', 'group_name']]
@@ -194,6 +205,12 @@ for supergroup, subgroup in line_plot_config.items():
                                                                 )
                             ) 
                     )
+    simple_line_df = (simple_line_df
+                     .assign(group_name=lambda x: pd.Categorical(x['group_name'], ordered=True,
+                                                                 categories=subgroup.keys()
+                                                                )
+                            ) 
+                    )
 
     # space breaks every ? sites
     site_break_freq = 10
@@ -201,6 +218,8 @@ for supergroup, subgroup in line_plot_config.items():
         start = int(math.ceil(tup[0] / site_break_freq)) * site_break_freq
         end = int(math.floor(tup[1] / site_break_freq)) * site_break_freq
         return list(range(start, end + 1, site_break_freq))
+    
+    ylim=df_with_mean.query('is_mean')['site_escape'].max()*1.5
 
     # make plot
     p = (ggplot(df_with_mean
@@ -213,14 +232,36 @@ for supergroup, subgroup in line_plot_config.items():
              group='condition',
              alpha='is_mean', size='is_mean') +
 
-         geom_rect(data=annotation_df.assign(is_mean=False),
-                   mapping=aes(xmin='xmin',
-                               xmax='xmax',
-                               ymin=-np.inf,
-                               ymax=np.inf,
-                               fill='antibody_class',
+         # geom_rect(data=annotation_df.assign(is_mean=False),
+         #           mapping=aes(xmin='xmin',
+         #                       xmax='xmax',
+         #                       ymin=-np.inf,
+         #                       ymax=np.inf,
+         #                       fill='antibody_class',
+         #                      ),
+         #           alpha=0.75,
+         #           inherit_aes=False,
+         #          ) +
+         
+         geom_segment(data=simple_line_df.assign(is_mean=False),
+                      mapping=aes(x='xmin',
+                                  xend='xmax',
+                                  y=ylim*0.9,
+                                  yend=ylim*0.9,
+                                  linetype='epitope',
+                                 ),
+                      alpha=1,
+                      color='#808080',
+                      inherit_aes=False,
+                     ) +
+         geom_text(data=simple_line_df,
+                   mapping=aes(label='label', 
+                               x='xmin', 
+                               y=ylim*0.95,
                               ),
-                   alpha=0.75,
+                   size=7,
+                   color='#808080',
+                   ha='left',
                    inherit_aes=False,
                   ) +
 
@@ -232,7 +273,7 @@ for supergroup, subgroup in line_plot_config.items():
                strip_background=element_blank(),
                ) +
          scale_x_continuous(expand=(0, 0), breaks=get_site_breaks) +
-         scale_y_continuous(limits=(None, (df_with_mean.query('is_mean')['site_escape'].max()*1.5))) +
+         scale_y_continuous(limits=(None, ylim )) +
          scale_alpha_discrete(range=(0.25, 1)) +  # transparency of individual and mean lines
          scale_size_manual(values=(0.25, 0.5)) +  # size of individual and mean lines
          scale_color_manual(values=['#e52794', '#6a0dad', '#66ccee', '#E69F00']) +
@@ -253,8 +294,9 @@ for supergroup, subgroup in line_plot_config.items():
     _ = p.draw()
 ```
 
-    /loc/scratch/49517465/ipykernel_9726/1068878828.py:33: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+    /tmp/ipykernel_35836/2761734335.py:44: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
     /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/scales/scale_alpha.py:68: PlotnineWarning: Using alpha for a discrete variable is not advised.
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
     /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
     /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
 
@@ -264,11 +306,31 @@ for supergroup, subgroup in line_plot_config.items():
 
     /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
     /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+    /tmp/ipykernel_35836/2761734335.py:44: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/scales/scale_alpha.py:68: PlotnineWarning: Using alpha for a discrete variable is not advised.
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+
+
+    Saving to results/lineplots_by_group/mice_grouped_lineplots.pdf
+
+
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
 
 
 
     
-![png](lineplots_by_group_files/lineplots_by_group_8_3.png)
+![png](lineplots_by_group_files/lineplots_by_group_8_5.png)
+    
+
+
+
+    
+![png](lineplots_by_group_files/lineplots_by_group_8_6.png)
     
 
 
@@ -361,6 +423,16 @@ for p in pdbfiles.keys():
       Writing B-factor re-assigned PDBs for mosaic-8bRBDNHPs to:
         results/lineplots_by_group/mosaic-8bRBDNHPs_6M0J_mean_total_escape.pdb
     
+    Making PDB mappings for the average of 6 conditions for mosaic-8bRBD-mi3-immunizedmice to data/pdbs/6M0J.pdb
+    Mapping to the following chain: E
+      Writing B-factor re-assigned PDBs for mosaic-8bRBD-mi3-immunizedmice to:
+        results/lineplots_by_group/mosaic-8bRBD-mi3-immunizedmice_6M0J_mean_total_escape.pdb
+    
+    Making PDB mappings for the average of 6 conditions for homotypicBetaRBD-mi3-immunizedmice to data/pdbs/6M0J.pdb
+    Mapping to the following chain: E
+      Writing B-factor re-assigned PDBs for homotypicBetaRBD-mi3-immunizedmice to:
+        results/lineplots_by_group/homotypicBetaRBD-mi3-immunizedmice_6M0J_mean_total_escape.pdb
+    
     Making PDB mappings for the average of 6 conditions for mosaic-8bRBDmice to data/pdbs/7LYQ_RBD.pdb
     Mapping to the following chain: B
       Writing B-factor re-assigned PDBs for mosaic-8bRBDmice to:
@@ -375,6 +447,16 @@ for p in pdbfiles.keys():
     Mapping to the following chain: B
       Writing B-factor re-assigned PDBs for mosaic-8bRBDNHPs to:
         results/lineplots_by_group/mosaic-8bRBDNHPs_7LYQ_RBD_mean_total_escape.pdb
+    
+    Making PDB mappings for the average of 6 conditions for mosaic-8bRBD-mi3-immunizedmice to data/pdbs/7LYQ_RBD.pdb
+    Mapping to the following chain: B
+      Writing B-factor re-assigned PDBs for mosaic-8bRBD-mi3-immunizedmice to:
+        results/lineplots_by_group/mosaic-8bRBD-mi3-immunizedmice_7LYQ_RBD_mean_total_escape.pdb
+    
+    Making PDB mappings for the average of 6 conditions for homotypicBetaRBD-mi3-immunizedmice to data/pdbs/7LYQ_RBD.pdb
+    Mapping to the following chain: B
+      Writing B-factor re-assigned PDBs for homotypicBetaRBD-mi3-immunizedmice to:
+        results/lineplots_by_group/homotypicBetaRBD-mi3-immunizedmice_7LYQ_RBD_mean_total_escape.pdb
 
 
 

@@ -175,7 +175,7 @@ for supergroup, subgroup in line_plot_config.items():
         annotation_df = pd.concat([annotation_df, label_df], axis=0, ignore_index=True)
         
         line_df = (pd.DataFrame({'xmin':[339.5, 461.5, 471.5],
-                                 'xmax': [408.5, 468.5, 489.5],
+                                 'xmax': [408.5, 468.5, 503.5],
                                  'epitope': ['more conserved', 'more conserved', 'more variable'],
                                  'label': ['more conserved', '', 'more variable']
                                 }
@@ -219,7 +219,8 @@ for supergroup, subgroup in line_plot_config.items():
         end = int(math.floor(tup[1] / site_break_freq)) * site_break_freq
         return list(range(start, end + 1, site_break_freq))
     
-    ylim=df_with_mean.query('is_mean')['site_escape'].max()*1.5
+    # I hard-coded the average of the y-lims for NHP logo plots here...
+    ylim=max(df_with_mean.query('is_mean')['site_escape'].max()*1.5, 1.186)
 
     # make plot
     p = (ggplot(df_with_mean
@@ -259,18 +260,20 @@ for supergroup, subgroup in line_plot_config.items():
                                x='xmin', 
                                y=ylim*0.95,
                               ),
-                   size=7,
+                   size=8.8,
                    color='#808080',
                    ha='left',
                    inherit_aes=False,
                   ) +
 
          geom_line() +
-         facet_wrap('~ group_name', ncol=1) +
+         facet_wrap('~ group_name', ncol=1, scales='free_x') + #scales='free_y'
          theme_classic() +
          theme(figure_size=(5, 2 * df_with_mean['group_name'].nunique()),
                axis_text_x=element_text(rotation=90, hjust=0.5),
                strip_background=element_blank(),
+               subplots_adjust={'hspace':0.5},
+               strip_text=element_text(size=11),
                ) +
          scale_x_continuous(expand=(0, 0), breaks=get_site_breaks) +
          scale_y_continuous(limits=(None, ylim )) +
@@ -278,7 +281,8 @@ for supergroup, subgroup in line_plot_config.items():
          scale_size_manual(values=(0.25, 0.5)) +  # size of individual and mean lines
          scale_color_manual(values=['#e52794', '#6a0dad', '#66ccee', '#E69F00']) +
          scale_fill_manual(values=['#e52794', '#6a0dad', '#66ccee', '#E69F00']) +
-         guides(alpha=False, size=False, )+ #color=False, fill=False
+         scale_linetype_manual(values=['solid', 'dotted'])+
+         guides(alpha=False, size=False, linetype=False)+ #color=False, fill=False
          labs(x="RBD site",
               y="site-total antibody escape",
               color='antibody epitope',
@@ -294,7 +298,7 @@ for supergroup, subgroup in line_plot_config.items():
     _ = p.draw()
 ```
 
-    /tmp/ipykernel_35836/2761734335.py:44: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+    /tmp/ipykernel_29132/3671040403.py:44: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
     /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/scales/scale_alpha.py:68: PlotnineWarning: Using alpha for a discrete variable is not advised.
     /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
     /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
@@ -307,7 +311,7 @@ for supergroup, subgroup in line_plot_config.items():
     /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
     /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
     /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
-    /tmp/ipykernel_35836/2761734335.py:44: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+    /tmp/ipykernel_29132/3671040403.py:44: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
     /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/scales/scale_alpha.py:68: PlotnineWarning: Using alpha for a discrete variable is not advised.
     /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
     /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
@@ -320,17 +324,36 @@ for supergroup, subgroup in line_plot_config.items():
     /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
     /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
     /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+    /tmp/ipykernel_29132/3671040403.py:44: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/scales/scale_alpha.py:68: PlotnineWarning: Using alpha for a discrete variable is not advised.
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+
+
+    Saving to results/lineplots_by_group/nhp_grouped_lineplots.pdf
+
+
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+    /fh/fast/bloom_j/computational_notebooks/agreaney/2022/SARS-CoV-2-RBD_Beta_mosaic_np_vaccine/env/lib/python3.8/site-packages/plotnine/utils.py:371: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
 
 
 
     
-![png](lineplots_by_group_files/lineplots_by_group_8_5.png)
+![png](lineplots_by_group_files/lineplots_by_group_8_7.png)
     
 
 
 
     
-![png](lineplots_by_group_files/lineplots_by_group_8_6.png)
+![png](lineplots_by_group_files/lineplots_by_group_8_8.png)
+    
+
+
+
+    
+![png](lineplots_by_group_files/lineplots_by_group_8_9.png)
     
 
 
@@ -433,6 +456,11 @@ for p in pdbfiles.keys():
       Writing B-factor re-assigned PDBs for homotypicBetaRBD-mi3-immunizedmice to:
         results/lineplots_by_group/homotypicBetaRBD-mi3-immunizedmice_6M0J_mean_total_escape.pdb
     
+    Making PDB mappings for the average of 4 conditions for mosaic-8bRBD-mi3-immunizedNHPs to data/pdbs/6M0J.pdb
+    Mapping to the following chain: E
+      Writing B-factor re-assigned PDBs for mosaic-8bRBD-mi3-immunizedNHPs to:
+        results/lineplots_by_group/mosaic-8bRBD-mi3-immunizedNHPs_6M0J_mean_total_escape.pdb
+    
     Making PDB mappings for the average of 6 conditions for mosaic-8bRBDmice to data/pdbs/7LYQ_RBD.pdb
     Mapping to the following chain: B
       Writing B-factor re-assigned PDBs for mosaic-8bRBDmice to:
@@ -457,6 +485,11 @@ for p in pdbfiles.keys():
     Mapping to the following chain: B
       Writing B-factor re-assigned PDBs for homotypicBetaRBD-mi3-immunizedmice to:
         results/lineplots_by_group/homotypicBetaRBD-mi3-immunizedmice_7LYQ_RBD_mean_total_escape.pdb
+    
+    Making PDB mappings for the average of 4 conditions for mosaic-8bRBD-mi3-immunizedNHPs to data/pdbs/7LYQ_RBD.pdb
+    Mapping to the following chain: B
+      Writing B-factor re-assigned PDBs for mosaic-8bRBD-mi3-immunizedNHPs to:
+        results/lineplots_by_group/mosaic-8bRBD-mi3-immunizedNHPs_7LYQ_RBD_mean_total_escape.pdb
 
 
 

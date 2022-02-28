@@ -35,3 +35,10 @@ mice:
     - homotypic_6882_5000
     - homotypic_6884_5000
     - homotypic_6885_5000
+
+nhp:
+  mosaic-8b RBD-mi3-immunized NHPs (n=4):
+    - NHP_mosaic_MA292_1000
+    - NHP_mosaic_AO2_1000
+    - NHP_mosaic_0Z5_1000
+    - NHP_mosaic_AT5_1000
